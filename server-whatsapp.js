@@ -817,6 +817,16 @@ const sendMessage = sendWorkerMessage;
 
 // ── 6. Lightweight HTTP Health Check & Control Server ──────────────────────
 const server = http.createServer(async (req, res) => {
+  // CORS Headers & Preflight Handling
+res.setHeader('Access-Control-Allow-Origin', '*');
+res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+if (req.method === 'OPTIONS') {
+  res.writeHead(204);
+  res.end();
+  return;
+}
   const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
 
   // Express-like compatibility helpers
