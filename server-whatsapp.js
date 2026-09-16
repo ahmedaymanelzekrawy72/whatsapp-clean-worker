@@ -991,8 +991,8 @@ const server = http.createServer(async (req, res) => {
 
 // ── 7. Bootstrap & Lifecycle ───────────────────────────────────────────────
 if (require.main === module) {
-  server.listen(PORT, async () => {
-    console.log(`=======================================================`);
+server.listen(PORT, '0.0.0.0', async () => {
+  console.log(`=======================================================`);
     console.log(`🚀 Taqa WhatsApp Background Worker started on port ${PORT}`);
     console.log(`📡 Supabase Endpoint: ${SUPABASE_URL}`);
     console.log(`=======================================================`);
