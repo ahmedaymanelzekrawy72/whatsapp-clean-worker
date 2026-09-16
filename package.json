@@ -7,7 +7,9 @@
     "start": "node server-whatsapp.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.39.8",
+    "@whiskeysockets/baileys": "^6.6.0",
     "express": "^4.19.2",
-    "@supabase/supabase-js": "^2.39.8"
+    "pino": "^8.19.0"
   }
 }
