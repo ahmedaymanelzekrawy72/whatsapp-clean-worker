@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node server-whatsapp.js"
   },
-  "dependencies": {
-    "express": "^4.19.2",
-    "'@supabase/supabase-js'": "^2.39.8"
-  }
+ "dependencies": {
+  "express": "^4.19.2",
+  "@supabase/supabase-js": "^2.39.8"
 }
